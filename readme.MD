@@ -66,3 +66,7 @@
   - **transient** : Attributes and methods are skipped when serializing the object containing them.
   - **synchronized** : Methods can only be accessed by one thread at a time.
   - **volatile** : The value of an attribute is not cached thread-locally, and is always read from the "main memory".
+
+### Enums
+- An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+- To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:
