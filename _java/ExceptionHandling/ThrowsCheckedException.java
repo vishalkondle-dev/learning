@@ -7,6 +7,7 @@ public abstract class ThrowsCheckedException {
     static void readFile(int age) throws FileNotFoundException {
         try {
             FileReader fileReader = new FileReader("C:\\test\\a.txt");
+            System.out.println(fileReader);
         } catch (FileNotFoundException e) {
             throw new FileNotFoundException("Some error related to FileNotFoundException");
         }
