@@ -1,4 +1,4 @@
-package _java.ObjectOrientedProgramming.Polymorphism;
+package _java.ObjectOrientedProgramming.PolymorphismExamples;
 
 class Polygon {
 
