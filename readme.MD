@@ -70,3 +70,21 @@
 ### Enums
 - An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
 - To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:
+
+### Java 8 Features
+- **Why?**
+  - Minimal code
+  - Functional programming benefits
+  - More Compatible code with multi core processors
+- **Features**
+  - Lambda Expression
+  - Stream API
+  - Date and Time API
+  - Base64 Encode and Decode
+  - Method Reference and Constructor Reference
+  - Default methods in interfaces
+  - Static methods in interfaces
+  - Functional Interface - ```@FunctionalInterface```
+  - Optional Class
+  - Java IO Improvements
+  - Collection API Improvements
