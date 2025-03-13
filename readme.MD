@@ -88,3 +88,23 @@
   - Optional Class
   - Java IO Improvements
   - Collection API Improvements
+#### Lambda Expression
+- An anonymous function without a name, access modifiers, return type.
+- Syntax: ```(parameters) -> expression```
+- Example: ```(int a, int b) -> a + b```
+- Lambda expression can be used in place of a method reference.
+- Type inference - the compiler automatically infers the type of the variable.
+- Lambda expression can be used in place of a constructor reference.
+- If body has only one statement, then you can remove the curly braces and the return keyword.
+- If only one parameter, then you can remove the parentheses.
+
+**Function**
+```java
+public int lengthOfString(String str) {
+    return str.length();
+}
+```
+**Lambda Expression**
+```java
+str -> str.length()
+```
