@@ -112,3 +112,10 @@ str -> str.length()
 - An interface that contains only one abstract method.
 - An interfac can have any number of default and static methods.
 - @FunctionalInterface annotation is used to mark an interface as a functional interface.
+#### Defaault Methods
+- A method in an interface that has a default implementation.
+- A default method can be overridden in a subclass.
+- A default method can be called using the super keyword. // Parent.super.defaultMethod();
+- A default method should have a body.
+- A default method cannot be abstract.
+- A default method cannot be static.
