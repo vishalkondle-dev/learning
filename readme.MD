@@ -108,3 +108,7 @@ public int lengthOfString(String str) {
 ```java
 str -> str.length()
 ```
+#### Functional Interface
+- An interface that contains only one abstract method.
+- An interfac can have any number of default and static methods.
+- @FunctionalInterface annotation is used to mark an interface as a functional interface.
