@@ -87,7 +87,11 @@
         - TreeMap
       - Hashtable
 #### List
-#####  ArrayList
+**Methods**
+```java
+add(v), add(i, v), addAll(list), addAll(i, list), clear(), equals(), hashCode(), get(i), isEmpty(), lastIndexOf(), toArray(), contains(), containsAll(list), indexOf(v), remove(i), remove(v), removeAll(list), replaceAll((v) => condition), retainAll((v) => condition), set(i, v), sort(), spliterator(), subList(i, j), size()
+```
+#####  ArrayList ```extends List```
 ```java
   import java.util.ArrayList;
   import java.util.Collections;
@@ -95,5 +99,9 @@
   ArrayList<Integer> list = new ArrayList<Integer>();
   Collections.sort(list);
   ```
-- ArrayList size is not fixed. (diff. btwn Array & ArrayList)
-- **Methods** : add(v), add(i, v), remove(i), set(i, v), get(i), size(), contains(v), indexOf(v), clear(), isEmpty()
+#####  LinkedList ```extends List, Deque```
+```java
+  import java.util.LinkedList;
+  
+  LinkedList<Integer> list = new LinkedList<Integer>();
+  ```
