@@ -164,3 +164,14 @@ str -> str.length()
 - We can give these references directly at the place of lambda expression.
 - Method Reference
 - Constructor Reference
+#### Stream
+- A stream is a sequence of elements.
+- A stream can be created from a collection, array, or other stream.
+- There are many methods to create a stream.
+  - List li.stream()
+  - Arrays.stream(Array a)
+  - Stream.of()
+  - Stream.iterate()
+  - Stream.generate()
+- Stream Methods - 
+``` filter(), map(), distinct(), sorted(), limit(), skip(), peek(), forEach(), collect(), reduce(), min(), max(), count(), anyMatch(), noneMatch(), findAny(), findFirst() ```
