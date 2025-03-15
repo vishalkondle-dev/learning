@@ -144,3 +144,8 @@ str -> str.length()
 - A Supplier is nothing but a function that returns a value.
 - It has abstract get() method.
 - ```Supplier<String> getString = () -> "Hello";```
+#### Bi
+- These functions are used for two parameters.
+- BiPredicate
+- BiFunction
+- BiConsumer
