@@ -175,3 +175,14 @@ str -> str.length()
   - Stream.generate()
 - Stream Methods - 
 ``` filter(), map(), distinct(), sorted(), limit(), skip(), peek(), forEach(), collect(), reduce(), min(), max(), count(), anyMatch(), noneMatch(), findAny(), findFirst() ```
+### Date and Time
+- LocalDate
+- LocalTime
+- LocalDateTime
+- ZonedDateTime
+- Instant
+- Duration
+- Period
+- DateTimeFormatter
+- ZoneOffset
+- ```.parse('String', 'Pattern')```
