@@ -119,3 +119,9 @@ str -> str.length()
 - A default method should have a body.
 - A default method cannot be abstract.
 - A default method cannot be static.
+#### Static Methods
+- defined with the static keyword.
+- contains the complete definition of the method.
+- will not be visible and available to inherited class.
+- Only can be called using the interface class.
+- public **static** void main(String[] args) can be written in interface.
