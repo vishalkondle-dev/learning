@@ -149,3 +149,14 @@ str -> str.length()
 - BiPredicate
 - BiFunction
 - BiConsumer
+#### UnaryOperator and BinaryOperator
+- UnaryOperator
+- BinaryOperator
+- These interfaces are replacement for Function if we have all Generic types same.
+  ```java
+  Function<Integer, Integer> square = (n) -> n * n;>
+  UnaryOperator<Integer> unaryOperator = (n) -> n * n;
+
+  Function<Integer, Integer, Integer> add = (n1, n2) -> n1 + n2;
+  BinaryOperator<Integer> binaryOperator = (n1, n2) -> n1 + n2;
+  ```
