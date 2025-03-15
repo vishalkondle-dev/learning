@@ -131,5 +131,8 @@ str -> str.length()
 - public **static** void main(String[] args) can be written in interface.
 #### Predicates
 - A predicate is nothing but a function that returns a boolean value.
-- It has test, or, and, negate methods.
+- It has abstract test(), default or(), and, default negate(), static isEqual methods.
 - ```Predicate<Integer> isThalaForReason = (s) -> s % 7 == 0;```
+#### Function Interface
+- A Function is same as a Predicate but, it can something and returns a value.
+- It has abstract apply(), default andThen(), default compose() and static identity() method.
