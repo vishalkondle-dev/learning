@@ -160,3 +160,7 @@ str -> str.length()
   Function<Integer, Integer, Integer> add = (n1, n2) -> n1 + n2;
   BinaryOperator<Integer> binaryOperator = (n1, n2) -> n1 + n2;
   ```
+#### Method and Constructor Reference
+- We can give these references directly at the place of lambda expression.
+- Method Reference
+- Constructor Reference
