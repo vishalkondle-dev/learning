@@ -140,3 +140,7 @@ str -> str.length()
 - A Consumer is nothing but a function that does not return anything.
 - It has abstract accept() method.
 - ```Consumer<String> printString = (s) -> System.out.println(s);```
+#### Supplier
+- A Supplier is nothing but a function that returns a value.
+- It has abstract get() method.
+- ```Supplier<String> getString = () -> "Hello";```
