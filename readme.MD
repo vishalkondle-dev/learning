@@ -136,3 +136,7 @@ str -> str.length()
 #### Function Interface
 - A Function is same as a Predicate but, it can something and returns a value.
 - It has abstract apply(), default andThen(), default compose() and static identity() method.
+#### Consumer
+- A Consumer is nothing but a function that does not return anything.
+- It has abstract accept() method.
+- ```Consumer<String> printString = (s) -> System.out.println(s);```
