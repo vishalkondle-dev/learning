@@ -70,3 +70,126 @@
 ### Enums
 - An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
 - To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:
+
+### Java 8 Features
+- **Why?**
+  - Minimal code
+  - Functional programming benefits
+  - More Compatible code with multi core processors
+- **Features**
+  - Lambda Expression
+  - Stream API
+  - Date and Time API
+  - Base64 Encode and Decode
+  - Method Reference and Constructor Reference
+  - Default methods in interfaces
+  - Static methods in interfaces
+  - Functional Interface - ```@FunctionalInterface```
+  - Optional Class
+  - Java IO Improvements
+  - Collection API Improvements
+#### Lambda Expression
+- An anonymous function without a name, access modifiers, return type.
+- Syntax: ```(parameters) -> expression```
+- Example: ```(int a, int b) -> a + b```
+- Lambda expression can be used in place of a method reference.
+- Type inference - the compiler automatically infers the type of the variable.
+- Lambda expression can be used in place of a constructor reference.
+- If body has only one statement, then you can remove the curly braces and the return keyword.
+- If only one parameter, then you can remove the parentheses.
+- This can be used to create a functional interface.
+- Lambda expression can be used in place of a method reference.
+- We dont need to create a seperate class which will implement the interface with only one abstract method.
+- Directly, we can give the implementation of the method with lambda expression. ie. we dont need to create new class and object.
+
+**Function**
+```java
+public int lengthOfString(String str) {
+    return str.length();
+}
+```
+**Lambda Expression**
+```java
+str -> str.length()
+```
+#### Functional Interface
+- An interface that contains only one abstract method.
+- An interfac can have any number of default and static methods.
+- @FunctionalInterface annotation is used to mark an interface as a functional interface.
+#### Defaault Methods
+- A method in an interface that has a default implementation.
+- A default method can be overridden in a subclass.
+- A default method can be called using the super keyword. // Parent.super.defaultMethod();
+- A default method should have a body.
+- A default method cannot be abstract.
+- A default method cannot be static.
+#### Static Methods
+- defined with the static keyword.
+- contains the complete definition of the method.
+- will not be visible and available to inherited class.
+- Only can be called using the interface class.
+- public **static** void main(String[] args) can be written in interface.
+#### Predicates
+- A predicate is nothing but a function that returns a boolean value.
+- It has abstract test(), default or(), and, default negate(), static isEqual methods.
+- ```Predicate<Integer> isThalaForReason = (s) -> s % 7 == 0;```
+#### Function Interface
+- A Function is same as a Predicate but, it can something and returns a value.
+- It has abstract apply(), default andThen(), default compose() and static identity() method.
+#### Consumer
+- A Consumer is nothing but a function that does not return anything.
+- It has abstract accept() method.
+- ```Consumer<String> printString = (s) -> System.out.println(s);```
+#### Supplier
+- A Supplier is nothing but a function that returns a value.
+- It has abstract get() method.
+- ```Supplier<String> getString = () -> "Hello";```
+#### Bi
+- These functions are used for two parameters.
+- BiPredicate
+- BiFunction
+- BiConsumer
+#### UnaryOperator and BinaryOperator
+- UnaryOperator
+- BinaryOperator
+- These interfaces are replacement for Function if we have all Generic types same.
+  ```java
+  Function<Integer, Integer> square = (n) -> n * n;>
+  UnaryOperator<Integer> unaryOperator = (n) -> n * n;
+
+  Function<Integer, Integer, Integer> add = (n1, n2) -> n1 + n2;
+  BinaryOperator<Integer> binaryOperator = (n1, n2) -> n1 + n2;
+  ```
+#### Method and Constructor Reference
+- We can give these references directly at the place of lambda expression.
+- Method Reference
+- Constructor Reference
+#### Stream
+- A stream is a sequence of elements.
+- A stream can be created from a collection, array, or other stream.
+- There are many methods to create a stream.
+  - List li.stream()
+  - Arrays.stream(Array a)
+  - Stream.of()
+  - Stream.iterate()
+  - Stream.generate()
+- Stream Methods - 
+``` filter(), map(), distinct(), sorted(), limit(), skip(), peek(), forEach(), collect(), reduce(), min(), max(), count(), anyMatch(), noneMatch(), findAny(), findFirst() ```
+### Date and Time
+- LocalDate
+- LocalTime
+- LocalDateTime
+- ZonedDateTime
+- Instant
+- Duration
+- Period
+- DateTimeFormatter
+- ZoneOffset
+- ```.parse('String', 'Pattern')```
+### Optional Class
+- An optional is a container object which may or may not contain a non-null value.
+- It is a container object for a single, non-null value.
+- An optional can be in one of two states: empty or containing a non-null value.
+- An empty optional is created using the empty() method.
+- A non-empty optional is created using the of() method.
+- An optional can be converted to a value using the get() method.
