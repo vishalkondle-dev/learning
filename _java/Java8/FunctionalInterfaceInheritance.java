@@ -4,7 +4,7 @@ package _java.Java8;
 interface FunctionalInterfaceInheritance extends MyFunctionalInterface {
 
     @Override
-    void abstractMethod();
+    String abstractMethod();
 
     // void newMethod(); // Error: FunctionalInterfaceInheritance is not a
     // functional interface

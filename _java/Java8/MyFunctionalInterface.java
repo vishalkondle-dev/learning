@@ -4,7 +4,7 @@ package _java.Java8;
 public interface MyFunctionalInterface {
 
     // abstract method
-    void abstractMethod();
+    String abstractMethod();
     // void abstractMethod1(); // Error: Multiple non-overriding abstract methods
     // found in interface MyFunctionalInterface
 

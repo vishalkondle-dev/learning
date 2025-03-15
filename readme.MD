@@ -97,6 +97,10 @@
 - Lambda expression can be used in place of a constructor reference.
 - If body has only one statement, then you can remove the curly braces and the return keyword.
 - If only one parameter, then you can remove the parentheses.
+- This can be used to create a functional interface.
+- Lambda expression can be used in place of a method reference.
+- We dont need to create a seperate class which will implement the interface with only one abstract method.
+- Directly, we can give the implementation of the method with lambda expression. ie. we dont need to create new class and object.
 
 **Function**
 ```java
