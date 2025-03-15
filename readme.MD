@@ -129,3 +129,7 @@ str -> str.length()
 - will not be visible and available to inherited class.
 - Only can be called using the interface class.
 - public **static** void main(String[] args) can be written in interface.
+#### Predicates
+- A predicate is nothing but a function that returns a boolean value.
+- It has test, or, and, negate methods.
+- ```Predicate<Integer> isThalaForReason = (s) -> s % 7 == 0;```
