@@ -175,7 +175,7 @@ str -> str.length()
   - Stream.generate()
 - Stream Methods - 
 ``` filter(), map(), distinct(), sorted(), limit(), skip(), peek(), forEach(), collect(), reduce(), min(), max(), count(), anyMatch(), noneMatch(), findAny(), findFirst() ```
-### Date and Time
+#### Date and Time
 - LocalDate
 - LocalTime
 - LocalDateTime
@@ -186,10 +186,21 @@ str -> str.length()
 - DateTimeFormatter
 - ZoneOffset
 - ```.parse('String', 'Pattern')```
-### Optional Class
+#### Optional Class
 - An optional is a container object which may or may not contain a non-null value.
 - It is a container object for a single, non-null value.
 - An optional can be in one of two states: empty or containing a non-null value.
 - An empty optional is created using the empty() method.
 - A non-empty optional is created using the of() method.
 - An optional can be converted to a value using the get() method.
+### Collection Framework
+#### *List*
+- It stores the elements in contiguous memory locations.
+- It is an ordered collection.
+- It allows duplicate elements.
+- It can be accessed using index.
+#### 1. ArrayList
+- An ArrayList is a dynamic array.
+- It can grow and shrink in size.
+- It is a class that implements the List interface.
+- It has a add, remove, get, set, size and etc methods.
