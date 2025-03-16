@@ -1,10 +1,11 @@
 package _java.CollectionFramework;
 
 import java.util.Set;
+import java.util.HashSet;
 
-public class HashSet {
+public class HashSets {
     public static void main(String[] args) {
-        Set<String> set = new java.util.HashSet<String>();
+        Set<String> set = new HashSet<String>();
 
         // Add elements to the set
         set.add("Hello");
