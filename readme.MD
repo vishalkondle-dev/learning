@@ -222,3 +222,10 @@ str -> str.length()
 - previous has the address of previous element.
 - It is a dynamic data structure.
 - It can grow and shrink in size.
+#### 2. PriorityQueue
+- A PriorityQueue is a class that implements the Queue interface.
+- It is a class that implements the PriorityQueue interface.
+- It also has add, remove, element which will throw an exception if operation is not successful.
+- It is a heap data structure.
+- We can change the priority by providing a comparator.
+- ```PriorityQueue<String> pq = new PriorityQueue<String>(Comparator.reverseOrder());```
