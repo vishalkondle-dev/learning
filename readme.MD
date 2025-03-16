@@ -272,3 +272,4 @@ str -> str.length()
 #### Collections Class
 - A Collections class has many static methods as : ```sort(), reverse(), shuffle(), copy(), swap(), fill(), binarySearch()```.
 - It is a utility class that provides a number of useful methods for working with collections.
+- For Sorting of Class Objects, we need to implement Comparable Interface in our class. and override the compareTo() method.

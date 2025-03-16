@@ -28,5 +28,40 @@ public class CollectionsClass {
         Collections.swap(list, 0, 2);
         System.out.println("Collections.swap (0, 2) : " + list);
 
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Vinod", 16));
+        students.add(new Student("Arun", 18));
+        students.add(new Student("Vishal", 14));
+        System.out.println("students : " + students);
+
+        Collections.sort(students);
+        System.out.println("Collections.sort(students) : " + students);
+    }
+}
+
+class Student implements Comparable<Object> {
+    private String name;
+    private int rollNo;
+
+    public Student(String name, int rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public String toString() {
+        return "Name: " + this.name + ", RollNo: " + this.rollNo;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.rollNo - ((Student) o).rollNo;
     }
 }
