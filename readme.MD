@@ -338,3 +338,10 @@ str -> str.length()
   - A thread can be set as a daemon using the setDaemon() method.
   - A daemon thread is a thread that will be terminated when the main thread terminates.
   - By default, threads are not daemons. those are user threads.
+#### Synchronization
+- The Problem
+  - Multiple threads can access a shared resource at the same time.
+  - The shared resource can be modified by multiple threads at the same time, causing a race condition or deadlock.
+  - may be due to fast context switching, this may cause the shared resource to be modified by multiple threads at the same time.
+- The Solution
+  - To prevent, we need to use synchronization. ie. synchronized keyword or synchronized block.
