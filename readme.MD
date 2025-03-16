@@ -269,3 +269,6 @@ str -> str.length()
 - It is a static data structure.
 - It is a contiguous data structure.
 - It has a fixed size.
+#### Collections Class
+- A Collections class has many static methods as : ```sort(), reverse(), shuffle(), copy(), swap(), fill(), binarySearch()```.
+- It is a utility class that provides a number of useful methods for working with collections.
