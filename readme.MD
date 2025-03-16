@@ -369,3 +369,9 @@ str -> str.length()
 - In DeadLock.java, we have two threads, one is trying to write with pen and the other is trying to write with paper.
 - Then, we have two threads, one is trying to write with pen and the other is trying to write with paper.
 - But, when we use synchronized block, then it will prevent the deadlock.
+#### Thread Communication
+- In a multithreading environment, threads often need to communicate and coordinate with each other to accomplish a task.
+- Without proper communication mechanisms, threads might end up in inefficient busy-waiting states, leading to wastage of CPU resources and potential deadlocks.
+- **The Problem** : Threads need to check if another thread has finished its work. which will lead to CPU wastage.
+- **The Solution** : Threads can use wait(), notify() and notifyAll() methods to coordinate with each other. 
+- These methods can be called in only **synchronized methods or  blocks**.
