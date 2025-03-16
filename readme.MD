@@ -379,3 +379,6 @@ str -> str.length()
 - The ability of a thread to access a shared resource without causing a race condition or deadlock.
 - In Java, threads are not safe by default.
 - To make threads safe, we need to use synchronized keyword or synchronized block.
+#### Lambda Expression with Thread
+- Lambda expression can be used to create a thread.
+- Lambda expression can be used to create a runnable interface.
