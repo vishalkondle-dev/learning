@@ -175,7 +175,7 @@ str -> str.length()
   - Stream.generate()
 - Stream Methods - 
 ``` filter(), map(), distinct(), sorted(), limit(), skip(), peek(), forEach(), collect(), reduce(), min(), max(), count(), anyMatch(), noneMatch(), findAny(), findFirst() ```
-### Date and Time
+#### Date and Time
 - LocalDate
 - LocalTime
 - LocalDateTime
@@ -186,10 +186,91 @@ str -> str.length()
 - DateTimeFormatter
 - ZoneOffset
 - ```.parse('String', 'Pattern')```
-### Optional Class
+#### Optional Class
 - An optional is a container object which may or may not contain a non-null value.
 - It is a container object for a single, non-null value.
 - An optional can be in one of two states: empty or containing a non-null value.
 - An empty optional is created using the empty() method.
 - A non-empty optional is created using the of() method.
 - An optional can be converted to a value using the get() method.
+### Collection Framework
+#### *List*
+- It stores the elements in contiguous memory locations.
+- It is an ordered collection.
+- It allows duplicate elements.
+- It can be accessed using index.
+#### 1. ArrayList
+- An ArrayList is a dynamic array.
+- It can grow and shrink in size.
+- It is a class that implements the List interface.
+- It has a add, remove, get, set, size and etc methods.
+#### 2. Stack
+- A Stack is a last-in-first-out (LIFO) data structure.
+- It is a class that implements the Stack interface.
+- It has a push, pop, peek, search and etc methods.
+- It is used to implement the undo and redo operations.
+#### *Queue*
+- A Queue is a first-in-first-out (FIFO) data structure.
+- It is used to implement the queue operations.
+- It is a class that implements the Queue interface.
+- It has a peek, offer, poll, search and etc methods.
+- It also has add, remove, element which will throw an exception if operation is not successful.
+#### 1. LinkedList
+- A LinkedList is a class that can implement the **Queue and List** interface.
+- It store has 3 parts, data, next and previous.
+- next has the address of next element.
+- previous has the address of previous element.
+- It is a dynamic data structure.
+- It can grow and shrink in size.
+#### 2. PriorityQueue
+- A PriorityQueue is a class that implements the Queue interface.
+- It is a class that implements the PriorityQueue interface.
+- It also has add, remove, element which will throw an exception if operation is not successful.
+- It is a heap data structure.
+- We can change the priority by providing a comparator.
+- ```PriorityQueue<String> pq = new PriorityQueue<String>(Comparator.reverseOrder());```
+#### 3. ArrayDeque
+- An ArrayDeque is a class that implements the Deque interface.
+- It is a double ended queue.
+- It is a dynamic data structure.
+- It can add and remove elements from both ends.
+- It has a ```offerFirst, offerLast, pollFirst, pollLast, peekFirst, peekLast``` and etc methods which other collections don't have.
+#### *Set*
+- A Set is a collection of unique elements. does not allow duplicates.
+#### 1. HashSet
+- A HashSet is a class that implements the Set interface.
+- It is a dynamic data structure.
+- It is a hash table data structure.
+- It has a ```add, remove, contains, size``` and etc methods.
+- It doesn't maintain the order of elements.
+- Time Complexity - O(1)
+#### 2. LinkedHashSet
+- It is same as HashSet but it also **maintains the order of elements**.
+- Time Complexity - O(1)
+#### 3. TreeSet
+- It is same as HashSet but it is **a sorted set**.
+- It uses binary search tree to maintain the elements.
+- Time Complexity - O(log n)
+### Map
+- A Map is a collection of key-value pairs.
+#### 1. HashMap
+- A HashMap is a class that implements the Map interface.
+- It will not be sorted or ordered.
+- It is a dynamic data structure.
+- It is a hash table data structure.
+- It has a ```put, get, remove, containsKey, containsValue, size``` and etc methods.
+- Time Complexity - O(1)
+#### 2. TreeMap
+- It is same as HashMap but it is **a sorted map**.
+- It uses binary search tree to maintain the elements.
+- Time Complexity - O(log n)
+#### Arrays Class
+- An array is a collection of elements of the same type.
+- It is a static data structure.
+- It is a contiguous data structure.
+- It has a fixed size.
+#### Collections Class
+- A Collections class has many static methods as : ```sort(), reverse(), shuffle(), copy(), swap(), fill(), binarySearch()```.
+- It is a utility class that provides a number of useful methods for working with collections.
+- For Sorting of Class Objects, we need to implement Comparable Interface in our class. and override the compareTo() method.
+- Comparator is a functional interface that takes two objects and returns an integer to compare them.
