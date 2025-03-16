@@ -264,3 +264,8 @@ str -> str.length()
 - It is same as HashMap but it is **a sorted map**.
 - It uses binary search tree to maintain the elements.
 - Time Complexity - O(log n)
+#### Arrays Class
+- An array is a collection of elements of the same type.
+- It is a static data structure.
+- It is a contiguous data structure.
+- It has a fixed size.
