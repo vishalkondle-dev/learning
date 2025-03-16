@@ -209,7 +209,7 @@ str -> str.length()
 - It is a class that implements the Stack interface.
 - It has a push, pop, peek, search and etc methods.
 - It is used to implement the undo and redo operations.
-### *Queue*
+#### *Queue*
 - A Queue is a first-in-first-out (FIFO) data structure.
 - It is used to implement the queue operations.
 - It is a class that implements the Queue interface.
@@ -235,3 +235,11 @@ str -> str.length()
 - It is a dynamic data structure.
 - It can add and remove elements from both ends.
 - It has a ```offerFirst, offerLast, pollFirst, pollLast, peekFirst, peekLast``` and etc methods which other collections don't have.
+#### *Set*
+- A Set is a collection of unique elements. does not allow duplicates.
+#### 1. HashSet
+- A HashSet is a class that implements the Set interface.
+- It is a dynamic data structure.
+- It is a hash table data structure.
+- It has a ```add, remove, contains, size``` and etc methods.
+- It doesn't maintain the order of elements.
