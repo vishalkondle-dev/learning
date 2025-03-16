@@ -304,3 +304,37 @@ str -> str.length()
 - When A class already extending any parent class we cant extend Thread class. due to multiple inheritance. So, in that we can make use of Runnable Interface.
 - ```class MyThread extends ParentClass implements Runnable```
 - When a class not extending any parent class we can extend Thread class.
+##### Thread Methods
+- **Start**
+  - A thread can be started using the start() method.
+  - The start() method will execute the run() method of the thread.
+- **Stop**
+  - A thread can be stopped using the stop() method.
+- **Run**
+  - A thread can be run using the run() method.
+  - The run() method will execute the run() method of the thread.
+- **Join**
+  - A thread can be joined using the join() method. // main thread will wait for this thread to finish
+- **Sleep**
+  - A thread can be put to sleep using the sleep(miliseconds) method.
+- **Priority** - hint
+  - The priority of a thread is a value between 1 and 10.
+    - MIN_PRIORITY = 1, NORM_PRIORITY = 5, MAX_PRIORITY = 10
+  - The default priority of a thread is NORM_PRIORITY.
+  - This doesnt guarantee the order of execution of threads.
+  - The priority of a thread can be set using the setPriority() method.
+  - The priority of a thread can be obtained using the getPriority() method.
+- **Name**
+  - The name of a thread can be set using the setName() method. or can be set using the constructor.
+  - The name of a thread can be obtained using the getName() method.
+- **State**
+  - The state of a thread can be obtained using the getState() method.
+- **Interrupted**
+  - A thread can be interrupted using the interrupt() method.
+- **Yield** - hint
+  - A thread can be yielded using the yield() method.
+  - The yield() method will give up the CPU to another thread.
+- **Daemon**
+  - A thread can be set as a daemon using the setDaemon() method.
+  - A daemon thread is a thread that will be terminated when the main thread terminates.
+  - By default, threads are not daemons. those are user threads.
