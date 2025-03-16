@@ -294,3 +294,4 @@ str -> str.length()
 #### Threads
 - To create a thread, we need to extend the Thread class or implement the Runnable interface, and override the run() method.
 - To start a thread, we need to call the start() method.
+- When we create thread with Runnable interface, we need to create object of Thread class and pass the Runnable interface object as a parameter to the constructor.
