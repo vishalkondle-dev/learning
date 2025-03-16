@@ -251,7 +251,7 @@ str -> str.length()
 - It is same as HashSet but it is **a sorted set**.
 - It uses binary search tree to maintain the elements.
 - Time Complexity - O(log n)
-### Map
+#### Map
 - A Map is a collection of key-value pairs.
 #### 1. HashMap
 - A HashMap is a class that implements the Map interface.
@@ -274,3 +274,20 @@ str -> str.length()
 - It is a utility class that provides a number of useful methods for working with collections.
 - For Sorting of Class Objects, we need to implement Comparable Interface in our class. and override the compareTo() method.
 - Comparator is a functional interface that takes two objects and returns an integer to compare them.
+### Multithreading
+**Definitions**:
+- **CPU**: The central processing unit of a computer, responsible for executing instructions.
+- **Core**: An independent processing unit within a CPU. Modern CPUs have multiple cores to execute tasks in parallel.
+- **Program**: A set of instructions that can be executed by a computer.
+- **Process**: A running instance of a program that has its own memory space and resources. A process can have multiple threads.
+- **Thread**: The smallest unit of execution within a process. Threads share the same memory and resources of their parent process but can execute independently.
+- **Multitasking**: 
+  - At level of processes, which are the OS's primary units of execution.
+  - allows multiple programs to run concurrently.
+  - Each process has its own memory space and resources.
+- **Multithreading**: 
+  - At level of threads, which are the smallest units of execution within a process.
+  - allows multiple threads to run concurrently within a process.
+- **CPU (Manager)**: Manages different teams (processes).
+- **Processes (Teams)**: Each process is an independent team working on a specific project.
+- **Threads (Employees within a Team)**: Employees (threads) work together on different tasks within the same team (process) and share resources like memory.
