@@ -229,3 +229,9 @@ str -> str.length()
 - It is a heap data structure.
 - We can change the priority by providing a comparator.
 - ```PriorityQueue<String> pq = new PriorityQueue<String>(Comparator.reverseOrder());```
+#### 3. ArrayDeque
+- An ArrayDeque is a class that implements the Deque interface.
+- It is a double ended queue.
+- It is a dynamic data structure.
+- It can add and remove elements from both ends.
+- It has a ```offerFirst, offerLast, pollFirst, pollLast, peekFirst, peekLast``` and etc methods which other collections don't have.
