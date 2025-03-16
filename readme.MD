@@ -388,3 +388,21 @@ str -> str.length()
   - Resource Management
   - Response Time
   - Control over Thread Count
+#### Executors
+- Executors is a class that provides static methods to create thread pools.
+- ExecutorService is an interface that is used to execute tasks in a thread pool.
+- ```ExecutorService executor = Executors.newFixedThreadPool(9);```
+- ```ExecutorService executor = Executors.newSingleThreadExecutor();```
+- ```executor.shutdown();```
+- ```executor.awaitTermination(long timeout, TimeUnit unit);```
+- ```executor.submit(() -> System.out.println("Hello from task"));``` // will always return a null
+- ```executor.submit(() -> "Hello from task");``` // will return a future ie. an object that represents the result of the task ("Hello from task")
+- ```executor.submit(() -> System.out.println("Hello from task"), "Hello from task");``` // will return the second argument after the task is completed
+- ```future.get();``` // will wait for the task to complete
+- ```executor.execute(() -> System.out.println("Hello from task"));```
+- Methods:
+  - submit(Runnable task), submit(Runnable task, T result), submit(Callable<T> task), shutdown(), shutdownNow(), awaitTermination(long timeout, TimeUnit unit), isTerminated(), isShutdown(), execute(Runnable command), invokeAll(Collection <T>), invokeAny(Collection <T>)
+#### Future
+- A Future is an object that represents the result of an asynchronous operation.
+- Methods: 
+  - get(), get(long timeout, TimeUnit unit), cancel(boolean mayInterruptIfRunning), isDone(), isCancelled(), getNow(T defaultValue), getNow()
