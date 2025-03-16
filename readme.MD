@@ -382,3 +382,9 @@ str -> str.length()
 #### Lambda Expression with Thread
 - Lambda expression can be used to create a thread.
 - Lambda expression can be used to create a runnable interface.
+#### Thread Pool
+- A thread pool is a collection of threads that are pre-initialized and used to execute tasks.
+- Why
+  - Resource Management
+  - Response Time
+  - Control over Thread Count
