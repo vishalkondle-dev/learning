@@ -251,3 +251,12 @@ str -> str.length()
 - It is same as HashSet but it is **a sorted set**.
 - It uses binary search tree to maintain the elements.
 - Time Complexity - O(log n)
+### Map
+- A Map is a collection of key-value pairs.
+#### 1. HashMap
+- A HashMap is a class that implements the Map interface.
+- It will not be sorted or ordered.
+- It is a dynamic data structure.
+- It is a hash table data structure.
+- It has a ```put, get, remove, containsKey, containsValue, size``` and etc methods.
+- Time Complexity - O(1)
