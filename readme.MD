@@ -361,3 +361,11 @@ str -> str.length()
 - This will help us for read access with multiple threads when there is no write access with any other thread.
 - If already any thread is having write access then other threads will wait for that thread to finish.
 - This will provide the ```readLock() and writeLock()``` methods.
+#### DeadLock
+<!-- /Users/vishal/Documents/professional/learning/_java/Multithreading/Locks/DeadLock.java -->
+- DeadLock: Two threads are trying to access the same resource at the same time.
+- To avoid this, we need to use synchronization.
+- If we use synchronized block, then it will prevent the deadlock.
+- In DeadLock.java, we have two threads, one is trying to write with pen and the other is trying to write with paper.
+- Then, we have two threads, one is trying to write with pen and the other is trying to write with paper.
+- But, when we use synchronized block, then it will prevent the deadlock.
