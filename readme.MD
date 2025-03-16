@@ -260,3 +260,7 @@ str -> str.length()
 - It is a hash table data structure.
 - It has a ```put, get, remove, containsKey, containsValue, size``` and etc methods.
 - Time Complexity - O(1)
+#### 2. TreeMap
+- It is same as HashMap but it is **a sorted map**.
+- It uses binary search tree to maintain the elements.
+- Time Complexity - O(log n)
