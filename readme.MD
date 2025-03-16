@@ -243,5 +243,11 @@ str -> str.length()
 - It is a hash table data structure.
 - It has a ```add, remove, contains, size``` and etc methods.
 - It doesn't maintain the order of elements.
+- Time Complexity - O(1)
 #### 2. LinkedHashSet
 - It is same as HashSet but it also **maintains the order of elements**.
+- Time Complexity - O(1)
+#### 3. TreeSet
+- It is same as HashSet but it is **a sorted set**.
+- It uses binary search tree to maintain the elements.
+- Time Complexity - O(log n)
