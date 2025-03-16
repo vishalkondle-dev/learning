@@ -295,3 +295,8 @@ str -> str.length()
 - To create a thread, we need to extend the Thread class or implement the Runnable interface, and override the run() method.
 - To start a thread, we need to call the start() method.
 - When we create thread with Runnable interface, we need to create object of Thread class and pass the Runnable interface object as a parameter to the constructor.
+##### Thread Lifecycle
+- **NEW** : When a thread is created, it is in the new state. // constructor()
+- **RUNNABLE** : When a thread is started, it is in the runnable state. // start(), it can be running as well.
+- **BLOCKED/WAITING**: When a thread is blocked, it is in the blocked state. // wait()
+- **TERMINATED** : When a thread is terminated, it is in the terminated state. // join()
