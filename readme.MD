@@ -355,3 +355,4 @@ str -> str.length()
 - so, if want to wait for a specific amount of time, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
 - This scenario will come in when we are doing some DB operation and it is taking a long time to complete and we cant wait indefinitely.
 - so, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
+- ReentrantLock(true) is a fair lock and ReentrantLock(false) is a non-fair lock. It will be non-fair by default.
