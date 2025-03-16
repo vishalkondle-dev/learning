@@ -209,3 +209,16 @@ str -> str.length()
 - It is a class that implements the Stack interface.
 - It has a push, pop, peek, search and etc methods.
 - It is used to implement the undo and redo operations.
+### *Queue*
+- A Queue is a first-in-first-out (FIFO) data structure.
+- It is used to implement the queue operations.
+- It is a class that implements the Queue interface.
+- It has a peek, offer, poll, search and etc methods.
+- It also has add, remove, element which will throw an exception if operation is not successful.
+#### 1. LinkedList
+- A LinkedList is a class that can implement the **Queue and List** interface.
+- It store has 3 parts, data, next and previous.
+- next has the address of next element.
+- previous has the address of previous element.
+- It is a dynamic data structure.
+- It can grow and shrink in size.
