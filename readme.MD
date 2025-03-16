@@ -345,3 +345,13 @@ str -> str.length()
   - may be due to fast context switching, this may cause the shared resource to be modified by multiple threads at the same time.
 - The Solution
   - To prevent, we need to use synchronization. ie. synchronized keyword or synchronized block.
+#### ReentrantLock
+- A ReentrantLock is a class that implements the Lock interface.
+- It is a class that implements the ReentrantLock interface.
+- It also has a tryLock, tryLock(long time, TimeUnit unit), lock, unlock, isLocked, hasQueuedThreads, hasQueuedThread(Thread thread) and etc methods.
+- It is useful when we need to lock a resource for a specific amount of time and release it when we are done with it.
+- tryLock() method will try to acquire the lock and return true if it is acquired and false if it is not acquired.
+- tryLock(long time, TimeUnit unit) method will try to acquire the lock for a specific amount of time and return true if it is acquired and false if it is not acquired.
+- so, if want to wait for a specific amount of time, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
+- This scenario will come in when we are doing some DB operation and it is taking a long time to complete and we cant wait indefinitely.
+- so, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
