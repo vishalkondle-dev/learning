@@ -356,3 +356,8 @@ str -> str.length()
 - This scenario will come in when we are doing some DB operation and it is taking a long time to complete and we cant wait indefinitely.
 - so, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
 - ReentrantLock(true) is a fair lock and ReentrantLock(false) is a non-fair lock. It will be non-fair by default.
+#### ReadWriteLock
+- A ReadWriteLock is a class that implements the Lock interface.
+- This will help us for read access with multiple threads when there is no write access with any other thread.
+- If already any thread is having write access then other threads will wait for that thread to finish.
+- This will provide the ```readLock() and writeLock()``` methods.
