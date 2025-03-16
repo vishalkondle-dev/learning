@@ -375,3 +375,7 @@ str -> str.length()
 - **The Problem** : Threads need to check if another thread has finished its work. which will lead to CPU wastage.
 - **The Solution** : Threads can use wait(), notify() and notifyAll() methods to coordinate with each other. 
 - These methods can be called in only **synchronized methods or  blocks**.
+#### Thread Safety
+- The ability of a thread to access a shared resource without causing a race condition or deadlock.
+- In Java, threads are not safe by default.
+- To make threads safe, we need to use synchronized keyword or synchronized block.
