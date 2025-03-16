@@ -243,3 +243,5 @@ str -> str.length()
 - It is a hash table data structure.
 - It has a ```add, remove, contains, size``` and etc methods.
 - It doesn't maintain the order of elements.
+#### 2. LinkedHashSet
+- It is same as HashSet but it also **maintains the order of elements**.
