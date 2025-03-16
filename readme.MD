@@ -300,3 +300,7 @@ str -> str.length()
 - **RUNNABLE** : When a thread is started, it is in the runnable state. // start(), it can be running as well.
 - **BLOCKED/WAITING**: When a thread is blocked, it is in the blocked state. // wait()
 - **TERMINATED** : When a thread is terminated, it is in the terminated state. // join()
+##### Thread Class vs Runnable Interface
+- When A class already extending any parent class we cant extend Thread class. due to multiple inheritance. So, in that we can make use of Runnable Interface.
+- ```class MyThread extends ParentClass implements Runnable```
+- When a class not extending any parent class we can extend Thread class.
