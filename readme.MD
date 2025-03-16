@@ -291,3 +291,6 @@ str -> str.length()
 - **CPU (Manager)**: Manages different teams (processes).
 - **Processes (Teams)**: Each process is an independent team working on a specific project.
 - **Threads (Employees within a Team)**: Employees (threads) work together on different tasks within the same team (process) and share resources like memory.
+#### Threads
+- To create a thread, we need to extend the Thread class or implement the Runnable interface, and override the run() method.
+- To start a thread, we need to call the start() method.
