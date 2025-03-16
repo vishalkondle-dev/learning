@@ -204,3 +204,8 @@ str -> str.length()
 - It can grow and shrink in size.
 - It is a class that implements the List interface.
 - It has a add, remove, get, set, size and etc methods.
+#### 2. Stack
+- A Stack is a last-in-first-out (LIFO) data structure.
+- It is a class that implements the Stack interface.
+- It has a push, pop, peek, search and etc methods.
+- It is used to implement the undo and redo operations.
