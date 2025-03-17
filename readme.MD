@@ -413,3 +413,11 @@ str -> str.length()
 - ScheduledExecutorService is an interface that is used to execute tasks in a thread pool at a specific time in the future.
 - Methods:
   - ```schedule(() -> {}), schedule(() -> {}), scheduleAtFixedRate(() -> {}, long initialDelay, long period, TimeUnit unit), scheduleWithFixedDelay(() -> {}, long initialDelay, long delay, TimeUnit unit)```
+#### CountDownLatch
+- A CountDownLatch is a class that is used to synchronize multiple threads.
+- We need to pass the number of threads to the constructor. so, we can count down the number of threads.
+- We can use the await() method to wait for the count to reach zero.
+- We cannot reset the latch after initilizing it.
+- ```CountDownLatch latch = new CountDownLatch(3);```
+- ```executer.submit(() -> new SomeThread());```
+- ```latch.await();```
