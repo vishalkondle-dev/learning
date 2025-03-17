@@ -251,7 +251,7 @@ str -> str.length()
 - It is same as HashSet but it is **a sorted set**.
 - It uses binary search tree to maintain the elements.
 - Time Complexity - O(log n)
-### Map
+#### Map
 - A Map is a collection of key-value pairs.
 #### 1. HashMap
 - A HashMap is a class that implements the Map interface.
@@ -274,3 +274,166 @@ str -> str.length()
 - It is a utility class that provides a number of useful methods for working with collections.
 - For Sorting of Class Objects, we need to implement Comparable Interface in our class. and override the compareTo() method.
 - Comparator is a functional interface that takes two objects and returns an integer to compare them.
+### Multithreading
+**Definitions**:
+- **CPU**: The central processing unit of a computer, responsible for executing instructions.
+- **Core**: An independent processing unit within a CPU. Modern CPUs have multiple cores to execute tasks in parallel.
+- **Program**: A set of instructions that can be executed by a computer.
+- **Process**: A running instance of a program that has its own memory space and resources. A process can have multiple threads.
+- **Thread**: The smallest unit of execution within a process. Threads share the same memory and resources of their parent process but can execute independently.
+- **Multitasking**: 
+  - At level of processes, which are the OS's primary units of execution.
+  - allows multiple programs to run concurrently.
+  - Each process has its own memory space and resources.
+- **Multithreading**: 
+  - At level of threads, which are the smallest units of execution within a process.
+  - allows multiple threads to run concurrently within a process.
+- **CPU (Manager)**: Manages different teams (processes).
+- **Processes (Teams)**: Each process is an independent team working on a specific project.
+- **Threads (Employees within a Team)**: Employees (threads) work together on different tasks within the same team (process) and share resources like memory.
+#### Threads
+- To create a thread, we need to extend the Thread class or implement the Runnable interface, and override the run() method.
+- To start a thread, we need to call the start() method.
+- When we create thread with Runnable interface, we need to create object of Thread class and pass the Runnable interface object as a parameter to the constructor.
+##### Thread Lifecycle
+- **NEW** : When a thread is created, it is in the new state. // constructor()
+- **RUNNABLE** : When a thread is started, it is in the runnable state. // start(), it can be running as well.
+- **BLOCKED/WAITING**: When a thread is blocked, it is in the blocked state. // wait()
+- **TERMINATED** : When a thread is terminated, it is in the terminated state. // join()
+##### Thread Class vs Runnable Interface
+- When A class already extending any parent class we cant extend Thread class. due to multiple inheritance. So, in that we can make use of Runnable Interface.
+- ```class MyThread extends ParentClass implements Runnable```
+- When a class not extending any parent class we can extend Thread class.
+##### Thread Methods
+- **Start**
+  - A thread can be started using the start() method.
+  - The start() method will execute the run() method of the thread.
+- **Stop**
+  - A thread can be stopped using the stop() method.
+- **Run**
+  - A thread can be run using the run() method.
+  - The run() method will execute the run() method of the thread.
+- **Join**
+  - A thread can be joined using the join() method. // main thread will wait for this thread to finish
+- **Sleep**
+  - A thread can be put to sleep using the sleep(miliseconds) method.
+- **Priority** - hint
+  - The priority of a thread is a value between 1 and 10.
+    - MIN_PRIORITY = 1, NORM_PRIORITY = 5, MAX_PRIORITY = 10
+  - The default priority of a thread is NORM_PRIORITY.
+  - This doesnt guarantee the order of execution of threads.
+  - The priority of a thread can be set using the setPriority() method.
+  - The priority of a thread can be obtained using the getPriority() method.
+- **Name**
+  - The name of a thread can be set using the setName() method. or can be set using the constructor.
+  - The name of a thread can be obtained using the getName() method.
+- **State**
+  - The state of a thread can be obtained using the getState() method.
+- **Interrupted**
+  - A thread can be interrupted using the interrupt() method.
+- **Yield** - hint
+  - A thread can be yielded using the yield() method.
+  - The yield() method will give up the CPU to another thread.
+- **Daemon**
+  - A thread can be set as a daemon using the setDaemon() method.
+  - A daemon thread is a thread that will be terminated when the main thread terminates.
+  - By default, threads are not daemons. those are user threads.
+#### Synchronization
+- The Problem
+  - Multiple threads can access a shared resource at the same time.
+  - The shared resource can be modified by multiple threads at the same time, causing a race condition or deadlock.
+  - may be due to fast context switching, this may cause the shared resource to be modified by multiple threads at the same time.
+- The Solution
+  - To prevent, we need to use synchronization. ie. synchronized keyword or synchronized block.
+#### ReentrantLock
+- A ReentrantLock is a class that implements the Lock interface.
+- It is a class that implements the ReentrantLock interface.
+- It also has a tryLock, tryLock(long time, TimeUnit unit), lock, unlock, isLocked, hasQueuedThreads, hasQueuedThread(Thread thread) and etc methods.
+- It is useful when we need to lock a resource for a specific amount of time and release it when we are done with it.
+- tryLock() method will try to acquire the lock and return true if it is acquired and false if it is not acquired.
+- tryLock(long time, TimeUnit unit) method will try to acquire the lock for a specific amount of time and return true if it is acquired and false if it is not acquired.
+- so, if want to wait for a specific amount of time, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
+- This scenario will come in when we are doing some DB operation and it is taking a long time to complete and we cant wait indefinitely.
+- so, we can use tryLock(long time, TimeUnit unit) method and move on if it is not acquired. so it will not wait indefinitely.
+- ReentrantLock(true) is a fair lock and ReentrantLock(false) is a non-fair lock. It will be non-fair by default.
+#### ReadWriteLock
+- A ReadWriteLock is a class that implements the Lock interface.
+- This will help us for read access with multiple threads when there is no write access with any other thread.
+- If already any thread is having write access then other threads will wait for that thread to finish.
+- This will provide the ```readLock() and writeLock()``` methods.
+#### DeadLock
+<!-- /Users/vishal/Documents/professional/learning/_java/Multithreading/Locks/DeadLock.java -->
+- DeadLock: Two threads are trying to access the same resource at the same time.
+- To avoid this, we need to use synchronization.
+- If we use synchronized block, then it will prevent the deadlock.
+- In DeadLock.java, we have two threads, one is trying to write with pen and the other is trying to write with paper.
+- Then, we have two threads, one is trying to write with pen and the other is trying to write with paper.
+- But, when we use synchronized block, then it will prevent the deadlock.
+#### Thread Communication
+- In a multithreading environment, threads often need to communicate and coordinate with each other to accomplish a task.
+- Without proper communication mechanisms, threads might end up in inefficient busy-waiting states, leading to wastage of CPU resources and potential deadlocks.
+- **The Problem** : Threads need to check if another thread has finished its work. which will lead to CPU wastage.
+- **The Solution** : Threads can use wait(), notify() and notifyAll() methods to coordinate with each other. 
+- These methods can be called in only **synchronized methods or  blocks**.
+#### Thread Safety
+- The ability of a thread to access a shared resource without causing a race condition or deadlock.
+- In Java, threads are not safe by default.
+- To make threads safe, we need to use synchronized keyword or synchronized block.
+#### Lambda Expression with Thread
+- Lambda expression can be used to create a thread.
+- Lambda expression can be used to create a runnable interface.
+#### Thread Pool
+- A thread pool is a collection of threads that are pre-initialized and used to execute tasks.
+- Why
+  - Resource Management
+  - Response Time
+  - Control over Thread Count
+#### Executors
+- Executors is a class that provides static methods to create thread pools.
+##### ExecutorService
+- **ExecutorService** is an interface that is used to execute tasks in a thread pool.
+- ```ExecutorService executor = Executors.newFixedThreadPool(poolSize);```
+- ```ExecutorService executor = Executors.newSingleThreadExecutor(poolSize);```
+- ```ExecutorService executor = Executors.newCachedThreadPool(poolSize);```
+- ```ExecutorService executor = Executors.newScheduledThreadPool(poolSize);```
+- ```executor.shutdown();```
+- ```executor.awaitTermination(long timeout, TimeUnit unit);```
+- ```executor.submit(() -> System.out.println("Hello from task"));``` // will always return a null
+- ```executor.submit(() -> "Hello from task");``` // will return a future ie. an object that represents the result of the task ("Hello from task")
+- ```executor.submit(() -> System.out.println("Hello from task"), "Hello from task");``` // will return the second argument after the task is completed
+- ```future.get();``` // will wait for the task to complete
+- ```executor.execute(() -> System.out.println("Hello from task"));```
+- Methods:
+  - ```submit(Runnable task), submit(Runnable task, T result), submit(Callable<T> task), shutdown(), shutdownNow(), awaitTermination(long timeout, TimeUnit unit), isTerminated(), isShutdown(), execute(Runnable command), invokeAll(Collection <T>), invokeAny(Collection <T>)```
+##### Future
+- A Future is an object that represents the result of an asynchronous operation.
+- Methods: 
+  - ```get(), get(long timeout, TimeUnit unit), cancel(boolean mayInterruptIfRunning), isDone(), isCancelled(), getNow(T defaultValue), getNow()```
+##### ScheduledExecutorService
+- ScheduledExecutorService is an interface that is used to execute tasks in a thread pool at a specific time in the future.
+- Methods:
+  - ```schedule(() -> {}), schedule(() -> {}), scheduleAtFixedRate(() -> {}, long initialDelay, long period, TimeUnit unit), scheduleWithFixedDelay(() -> {}, long initialDelay, long delay, TimeUnit unit)```
+#### CountDownLatch
+- A CountDownLatch is a class that is used to synchronize multiple threads.
+- We need to pass the number of threads to the constructor. so, we can count down the number of threads.
+- We can use the await() method to wait for the count to reach zero.
+- We cannot reset the latch after initilizing it.
+- ```CountDownLatch latch = new CountDownLatch(3);```
+- ```executer.submit(() -> new SomeThread());```
+- ```latch.await();```
+#### CyclicBarrier
+- A CyclicBarrier is a class that is used to synchronize multiple threads.
+- Diff between CountDownLatch and CyclicBarrier
+  - CountDownLatch is used to wait for a specific number of threads to reach a certain state.
+  - CyclicBarrier is used to wait for a specific number of threads to reach a certain state and then release them all at the same time.
+- We can pass a lambda expression to the constructor of CyclicBarrier. so, that lambda expression will be executed when all the threads reach the barrier.
+- ```CyclicBarrier barrier = new CyclicBarrier(3, () -> System.out.println("All threads reached the barrier"));```
+#### CompletableFuture
+- A CompletableFuture is a class that is used to represent the result of an asynchronous operation.
+- We can use the thenApply() method to transform the result of the operation.
+- We can use the thenAccept() method to perform an action on the result of the operation.
+- We can use the thenRun() method to perform an action on the result of the operation.
+- ```CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> "Hello");```
+- ```future.thenApply((s) -> s.toUpperCase());```
+- ```future.thenAccept((s) -> System.out.println(s));```
+- ```future.thenRun(() -> System.out.println("Done"));```
