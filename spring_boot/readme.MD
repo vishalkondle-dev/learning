@@ -23,3 +23,15 @@
     - War - need to deploy on external web server
   - **Java Version** : 8
   - **Dependencies** : Spring Web
+## Maven
+[Maven Repository](https://mvnrepository.com)
+- Maven is a build and dependency management tool.
+- Intellij IDEA has a Maven plugin that can be used to run Maven commands. (Right Sidebar)
+- ```mvn validate``` : validate the project
+- ```mvn compile``` : compile the project
+- ```mvn test``` : run the tests
+- ```mvn package``` : package the project (creates a jar file)
+- ```mvn verify``` : verify the project
+- ```mvn install``` : install the project
+- ```mvn deploy``` : deploy the project
+- ```mvn clean``` : clean the project (removes the target directory)
