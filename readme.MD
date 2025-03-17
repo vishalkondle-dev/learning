@@ -428,3 +428,12 @@ str -> str.length()
   - CyclicBarrier is used to wait for a specific number of threads to reach a certain state and then release them all at the same time.
 - We can pass a lambda expression to the constructor of CyclicBarrier. so, that lambda expression will be executed when all the threads reach the barrier.
 - ```CyclicBarrier barrier = new CyclicBarrier(3, () -> System.out.println("All threads reached the barrier"));```
+#### CompletableFuture
+- A CompletableFuture is a class that is used to represent the result of an asynchronous operation.
+- We can use the thenApply() method to transform the result of the operation.
+- We can use the thenAccept() method to perform an action on the result of the operation.
+- We can use the thenRun() method to perform an action on the result of the operation.
+- ```CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> "Hello");```
+- ```future.thenApply((s) -> s.toUpperCase());```
+- ```future.thenAccept((s) -> System.out.println(s));```
+- ```future.thenRun(() -> System.out.println("Done"));```
