@@ -421,3 +421,10 @@ str -> str.length()
 - ```CountDownLatch latch = new CountDownLatch(3);```
 - ```executer.submit(() -> new SomeThread());```
 - ```latch.await();```
+#### CyclicBarrier
+- A CyclicBarrier is a class that is used to synchronize multiple threads.
+- Diff between CountDownLatch and CyclicBarrier
+  - CountDownLatch is used to wait for a specific number of threads to reach a certain state.
+  - CyclicBarrier is used to wait for a specific number of threads to reach a certain state and then release them all at the same time.
+- We can pass a lambda expression to the constructor of CyclicBarrier. so, that lambda expression will be executed when all the threads reach the barrier.
+- ```CyclicBarrier barrier = new CyclicBarrier(3, () -> System.out.println("All threads reached the barrier"));```
