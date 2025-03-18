@@ -43,3 +43,11 @@
   - It will hold the classes which have been annotated with the ```@Component``` annotation.
   - Every object ie. stored in the container is called a **Spring Bean**.
   - It is a collection of objects that are managed by the Spring Framework.
+## @SpringBootApplication
+- It is used to mark the **main class** (main method) of a Spring Boot application.
+- It is a combination of ```@Configuration``` and ```@EnableAutoConfiguration``` and ```@ComponentScan```.
+- ```@Configuration``` : It is used to define beans in a Spring Boot application.
+- ```@EnableAutoConfiguration``` : It is used to enable auto-configuration for a Spring Boot application.
+- ```@ComponentScan``` : It is used to scan for components in a Spring Boot application.
+- ```@Bean``` : It is used to define a bean in a Spring Boot application.
+- ```@Component``` : It is used to define a component in a Spring Boot application.
