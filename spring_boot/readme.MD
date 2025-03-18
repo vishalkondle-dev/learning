@@ -36,3 +36,10 @@
 - ```mvn install``` : install the project
 - ```mvn deploy``` : deploy the project
 - ```mvn clean``` : clean the project (removes the target directory)
+## IOC
+- Application Context : one of the way to achieve Inversion of Control.
+- Inversion of Control : 
+  - The container creates the objects and wires them together, it is present in the Spring Framework.
+  - It will hold the classes which have been annotated with the ```@Component``` annotation.
+  - Every object ie. stored in the container is called a **Spring Bean**.
+  - It is a collection of objects that are managed by the Spring Framework.
