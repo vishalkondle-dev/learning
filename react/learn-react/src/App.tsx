@@ -1,10 +1,10 @@
 import "./App.css";
-import UseMemo from "./hooks/UseMemo/UseMemo";
+import CustomHooks from "./hooks/CustomHooks/CustomHooks";
 
 function App() {
   return (
     <div className="App">
-      <UseMemo />
+      <CustomHooks />
     </div>
   );
 }
