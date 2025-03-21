@@ -101,3 +101,23 @@ const memoizedValue = useMemo(() => {
 
 - useMemo : It will memoize value.
 - It will not be re-ran on every render, instead it will be memoized and will only be re-ran when the dependencies change.
+
+## React Router
+
+```tsx
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+])
+<RouterProvider router={router} />
+```
+
+- createBrowserRouter : It will create a router object.
+- RouterProvider : It will render the router object.
+- path : It will be the path of the route.
+- element : It will be the element of the route. It can be JSX also.
+- Link : It will be the link to the route
+- NavLink : It will also be the link to the route with active class.
+- useParams : It will return the parameters of the route.
+- useNavigate : It will navigate to the route.
+- useLocation : It will return the location object.
+- useSearchParams : It will return the search params object.

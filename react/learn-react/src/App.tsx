@@ -1,10 +1,10 @@
 import "./App.css";
-import CustomHooks from "./hooks/CustomHooks/CustomHooks";
+import ReactRouter from "./react-router/ReactRouter";
 
 function App() {
   return (
     <div className="App">
-      <CustomHooks />
+      <ReactRouter />
     </div>
   );
 }
