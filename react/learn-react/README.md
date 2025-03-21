@@ -61,3 +61,20 @@ const ref = useRef(initialValue);
 - The ref object is a mutable value.
 - with that ref object we can access the DOM element.
 - when this ref object is updated, the component will not re-render.
+
+#### useReducer
+
+```tsx
+const [state, dispatch] = useReducer(reducer, initialState);
+```
+
+- useReducer : It will create a state object and a dispatch function.
+- reducer : It will be a function which will update the state object.
+- initialState : It will be the initial state of the state object.
+- dispatch
+  - It will be the function which will update the state object.
+  - The dispatch function is a pure function that accepts a function as an argument.
+  - The function is called with the current state as an argument.
+  - The function should return the new state.
+  - The state object is immutable.
+- State will be predicted state object.

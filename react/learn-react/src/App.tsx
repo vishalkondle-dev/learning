@@ -1,10 +1,10 @@
 import "./App.css";
-import UseRef from "./hooks/UseRef_";
+import UseReducer from "./hooks/UseReducer";
 
 function App() {
   return (
     <div className="App">
-      <UseRef />
+      <UseReducer />
     </div>
   );
 }
