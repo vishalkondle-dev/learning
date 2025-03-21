@@ -78,3 +78,15 @@ const [state, dispatch] = useReducer(reducer, initialState);
   - The function should return the new state.
   - The state object is immutable.
 - State will be predicted state object.
+
+#### useCallback
+
+```tsx
+const memoizedFunction = useCallback(() => {
+  // Do something
+}, [dependencies]);
+```
+
+- useCallback : It will memorize function.
+- It will not be re-created on every render, instead it will be memoized and will only be re-created when the dependencies change.
+- It will return a memoized function.

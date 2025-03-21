@@ -1,10 +1,10 @@
 import "./App.css";
-import UseReducer from "./hooks/UseReducer";
+import UseCallBack from "./hooks/UseCallback/UseCallback";
 
 function App() {
   return (
     <div className="App">
-      <UseReducer />
+      <UseCallBack />
     </div>
   );
 }
