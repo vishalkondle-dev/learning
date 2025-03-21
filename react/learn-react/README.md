@@ -121,3 +121,27 @@ const router = createBrowserRouter([
 - useNavigate : It will navigate to the route.
 - useLocation : It will return the location object.
 - useSearchParams : It will return the search params object.
+
+## Redux Toolkit
+
+```tsx
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
+
+const counter = useSelector((state) => state.counter);
+const dispatch = useDispatch();
+
+dispatch(increment());
+```
+
+- configureStore : It will create a store object.
+- reducer : It will be the reducer object.
+- useSelector : It will return the value of the store object.
+- useDispatch : It will return the dispatch function.
+- increment : It will increment the value of the store object.
+- createSlice : It will create a slice object, which will be used to create a reducer object.
+- createAsyncThunk : It will create a async thunk object, which will be used to create a async action object.
+- <Provider store={store}>{children}<Provider> : It will provide the store object to the component. It will be used to access the store object in the component.

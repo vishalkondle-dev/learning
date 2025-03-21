@@ -1,10 +1,10 @@
 import "./App.css";
-import ReactRouter from "./react-router/ReactRouter";
+import ReduxToolkit from "./redux-toolkit/ReduxToolkit";
 
 function App() {
   return (
     <div className="App">
-      <ReactRouter />
+      <ReduxToolkit />
     </div>
   );
 }
