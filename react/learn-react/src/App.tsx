@@ -1,15 +1,10 @@
-import { useState } from "react";
 import "./App.css";
-import UseEffect from "./hooks/UseEffect";
+import UseContext from "./hooks/UseContext/UseContext";
 
 function App() {
-  const [show, setShow] = useState(true);
   return (
     <div className="App">
-      <button onClick={() => setShow((oldState) => !oldState)}>
-        Show / Hide
-      </button>
-      {show ? <UseEffect show={show} /> : <></>}
+      <UseContext />
     </div>
   );
 }

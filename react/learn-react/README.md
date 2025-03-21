@@ -34,3 +34,17 @@ useEffect(() => {
   - If the depedency array is passed with any value(s), the function will run on first render and every time the value(s) change.
   - If the second argument is not passed, the function will run on every render.
 - Cleanup Function - It has the return function which is just before the component is unmounted.
+
+#### useContext
+
+```tsx
+const MyContext = createContext(intialValue);
+const value = useContext(MyContext);
+```
+
+- createContext : It will create a context object.
+- useContext : It will return the value of the context object.
+- MyContext.Provider :
+  - We need to provide the intial value to the context object.
+  - We need to wrap this as a provider to the component which needs the context object.
+- value : It will return the value of the context object.
