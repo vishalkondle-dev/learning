@@ -1,10 +1,10 @@
 import "./App.css";
-import ReduxToolkit from "./redux-toolkit/ReduxToolkit";
+import HigherOrderComponent from "./higher-order-functions/HigherOrderComponent";
 
 function App() {
   return (
     <div className="App">
-      <ReduxToolkit />
+      <HigherOrderComponent />
     </div>
   );
 }

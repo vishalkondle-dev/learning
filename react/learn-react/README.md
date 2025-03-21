@@ -102,6 +102,35 @@ const memoizedValue = useMemo(() => {
 - useMemo : It will memoize value.
 - It will not be re-ran on every render, instead it will be memoized and will only be re-ran when the dependencies change.
 
+## Higher Order Components
+
+```tsx
+// HOC.tsx
+const HOC = (Component) => {
+  return (props) => {
+    // Do something
+
+    return <Component {...props} />;
+  };
+};
+
+// App.tsx
+const App = () => {
+  const EnchanceComp = HOC(Component);
+
+  return <EnchanceComp />;
+};
+```
+
+- Higher Order Components (HOC) is a pattern in React for reusing code.
+- HOC is a function that takes a component as an argument and returns a new component.
+- The new component is a wrapper of the original component.
+- The wrapper component is responsible for adding props & behavior to the original component.
+- HOC : It will return a function which will return a component.
+- Component : It will be the component which will be passed to the HOC.
+- props : It will be the props which will be passed to the component.
+- EnchanceComp : It will be the component which will be returned by the HOC.
+
 ## React Router
 
 ```tsx
