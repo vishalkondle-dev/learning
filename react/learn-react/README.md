@@ -90,3 +90,14 @@ const memoizedFunction = useCallback(() => {
 - useCallback : It will memorize function.
 - It will not be re-created on every render, instead it will be memoized and will only be re-created when the dependencies change.
 - It will return a memoized function.
+
+#### useMemo
+
+```tsx
+const memoizedValue = useMemo(() => {
+  // Do something
+}, [dependencies]);
+```
+
+- useMemo : It will memoize value.
+- It will not be re-ran on every render, instead it will be memoized and will only be re-ran when the dependencies change.

@@ -1,10 +1,10 @@
 import "./App.css";
-import UseCallBack from "./hooks/UseCallback/UseCallback";
+import UseMemo from "./hooks/UseMemo/UseMemo";
 
 function App() {
   return (
     <div className="App">
-      <UseCallBack />
+      <UseMemo />
     </div>
   );
 }
