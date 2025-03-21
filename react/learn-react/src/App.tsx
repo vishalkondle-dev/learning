@@ -1,10 +1,10 @@
 import "./App.css";
-import UseContext from "./hooks/UseContext/UseContext";
+import UseRef from "./hooks/UseRef_";
 
 function App() {
   return (
     <div className="App">
-      <UseContext />
+      <UseRef />
     </div>
   );
 }

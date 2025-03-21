@@ -48,3 +48,16 @@ const value = useContext(MyContext);
   - We need to provide the intial value to the context object.
   - We need to wrap this as a provider to the component which needs the context object.
 - value : It will return the value of the context object.
+
+#### useRef
+
+```tsx
+const ref = useRef(initialValue);
+```
+
+- useRef : It will create a ref object.
+- ref.current : It will return the value of the ref object.
+- initialValue : It will set the initial value of the ref object.
+- The ref object is a mutable value.
+- with that ref object we can access the DOM element.
+- when this ref object is updated, the component will not re-render.
