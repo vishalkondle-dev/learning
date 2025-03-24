@@ -131,3 +131,32 @@
    ```
 
 5. Run the application
+
+### JAR vs Fat JAR
+
+1. **JAR**
+
+- A regular JAR contains only your compiled Java application code (.class files) along with metadata like MANIFEST.MF.
+- Dependencies (external libraries) are not included inside the JAR.
+- When running a regular JAR, you need to provide the required dependencies separately via the classpath.
+- ```bash
+  java -cp my-app.jar:lib/dependency1.jar:lib/dependency2.jar com.example.Main
+  ```
+
+2. **Fat JAR**
+
+- A Fat JAR (also called an Uber JAR) contains both your compiled application code and all of its required dependencies inside a single JAR file.
+- This makes it easier to deploy and run without needing external dependencies.
+- Typically used in Spring Boot applications where all necessary libraries are bundled.
+- ```bash
+  java -jar my-fat-app.jar
+  ```
+
+| **Feature Regular**                       | **JAR** | **Fat JAR** |
+| ----------------------------------------- | ------- | ----------- |
+| Includes dependencies?                    | ❌ No   | ✅ Yes      |
+| Requires external libraries?              | ✅ Yes  | ❌ No       |
+| Suitable for microservices (Spring Boot)? | ❌ No   | ✅ Yes      |
+| Deployment size                           | Smaller | Larger      |
+
+- Right-click on the project and hover on `Run as` > `maven install || maven build`
