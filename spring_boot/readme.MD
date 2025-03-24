@@ -1,5 +1,7 @@
 # Spring Boot
+
 ### Eclipse Shortcuts
+
 **Text Manipulation**
 | **Action** | **Shortcut** |
 |------------|-------------|
@@ -65,7 +67,8 @@
 | Run the program | `Ctrl + F11` |
 | View all keyboard shortcuts | `Ctrl + Shift + L` |
 
-### What is Spring Boot ?**
+### What is Spring Boot ?\*\*
+
 1. Java Framework : Spring boot is an open-source framework built on top of Java, making it easier to develop Java applications.
 2. Faster Development : It makes development faster by reducing configuration and boilderplate code.
 3. Stand-alone Applications : Spring Boot applications can run on their own without a external web server.
@@ -77,3 +80,54 @@
 9. Microservices : Spring Boot is a popular tool for building microservices, which are small, independent services that work together.
 10. Security : Authentication, Authorization etc.
 
+### Spring boot application without intializer
+
+1. Create a maven project
+2. Add spring-boot-starter-web dependency in pom.xml
+   ```xml
+   <parent>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-parent</artifactId>
+       <version>3.4.4</version>
+   </parent>
+   <dependencies>
+   <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-web</artifactId>
+   </dependency>
+   </dependencies>
+   ```
+3. Create a main class
+
+   ```java
+   package dev.vishalkondle;
+
+   import org.springframework.boot.SpringApplication;
+   import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+   @SpringBootApplication
+   public class SpringBootWithoutIntializerApplication {
+       public static void main(String[] args) {
+           SpringApplication.run(SpringBootWithoutIntializerApplication.class, args);
+       }
+   }
+   ```
+
+4. Create a controller classes
+
+   ```java
+   package com.controllers;
+
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.RestController;
+
+   @RestController
+   public class HelloController {
+       @GetMapping("/hello")
+       public String hello() {
+           return "Hello World";
+       }
+   }
+   ```
+
+5. Run the application
