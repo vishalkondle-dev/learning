@@ -160,3 +160,29 @@
 | Deployment size                           | Smaller | Larger      |
 
 - Right-click on the project and hover on `Run as` > `maven install || maven build`
+
+### application.properties
+
+1. application.properties is a configuration file for Spring Boot applications.
+2. It contains key-value pairs of properties that can be used to configure various aspects of the application.
+3. Location
+   - `src/main/resources/application.[properties | yml]`
+   - `/application.[properties | yml]`
+   - `*/config/application.[properties | yml]`
+4. You need to @Component the class to make it available to the Spring Boot application.
+5. @Value("${key}") - It is used to access the value of a configuration property in the application.properties file.
+
+   ```java
+    @Component
+    public class Test {
+        @Value("${port}")
+        int port;
+    }
+   ```
+
+6. then you can get
+   ```java
+   ConfigurableApplicationContext container = SpringApplication.run(SpringbootintroApplication.class, args);
+   Test t = container.getBean(Test.class);
+   System.out.println(t.getPort());
+   ```
